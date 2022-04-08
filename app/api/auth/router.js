@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const controller = require('./controller');
 
-router.get('/auth', function (req, res) {
-  res.status(200).json({ message: 'Welcome to Auth API' });
-});
+router.post('/auth/signin', controller.signin);
 
 module.exports = router;
